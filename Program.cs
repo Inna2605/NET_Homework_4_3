@@ -29,39 +29,63 @@ while (a != 0)
             }
         case 1:
             {
-                Violin violin = new Violin("Скрипка", "Опис скрипки");
-                violin.Show();
-                violin.Sound();
-                violin.Desc();
-                violin.History();
+                try
+                {
+                    Violin violin = new Violin("Скрипка", "Опис скрипки");
+                    violin.Show();
+                    violin.Sound();
+                    violin.Desc();
+                    violin.History();
+                }catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
                 break;
             }
             case 2:
             {
-                Trombone trombone = new Trombone("Тромбон", "Опис тромбона");
-                trombone.Show();
-                trombone.Sound();
-                trombone.Desc();
-                trombone.History();
-                break;
+                try
+                {
+                    Trombone trombone = new Trombone("Тромбон", "Опис тромбона");
+                    trombone.Show();
+                    trombone.Sound();
+                    trombone.Desc();
+                    trombone.History();
+                }catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+            break;
             }
             case 3:
             {
-                Ukulele ukulele = new Ukulele("Укулеле", "Опис укулеле");
-                ukulele.Show();
-                ukulele.Sound();
-                ukulele.Desc(); 
-                ukulele.History();
-                break;
+                try
+                {
+                    Ukulele ukulele = new Ukulele("Укулеле", "Опис укулеле");
+                    ukulele.Show();
+                    ukulele.Sound();
+                    ukulele.Desc(); 
+                    ukulele.History();
+            }catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+        break;
             }
             case 4:
             {
-                Cello cello = new Cello("Віолончель","Опис віолончелі");
-                cello.Show();
-                cello.Sound();
-                cello.Desc();
-                cello.History();
-                break;
+                try
+                {
+                    Cello cello = new Cello("Віолончель","Опис віолончелі");
+                    cello.Show();
+                    cello.Sound();
+                    cello.Desc();
+                    cello.History();
+                }catch (Exception ex)
+                {
+                     Console.WriteLine(ex.Message);
+                }
+        break;
             }
     }
 }

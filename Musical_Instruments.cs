@@ -20,6 +20,7 @@ namespace NET_Homework_4_3
         public string Description;
         public Musical_Instrument(string name, string description)
         {
+            if(name == "") throw new ArgumentNullException("Музичного інструменту не існує!");
             Name = name;
             Description = description;
         }
@@ -33,7 +34,14 @@ namespace NET_Homework_4_3
         }
         public virtual void Desc()
         {
-            Console.WriteLine($"{Name}: {Description}");
+            if (Description == "")
+            {
+                throw new ArgumentNullException($"Немає опису {Name}");
+            }
+            else
+            {
+                Console.WriteLine($"{Name}: {Description}");
+            }
         }
         public virtual void History()
         {
